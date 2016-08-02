@@ -1,0 +1,18 @@
+{
+  "Listen": ":1234",
+  "Logger": {
+    "Debug": true,
+    "OutFile": false
+  },
+  "Server": {
+    "Quantity": 1000
+  },
+  "Worker": {
+    "Quantity": 100,
+    "Timeout": 2000
+  },
+  "DataBase": {
+    "DriverName": "mysql",
+    "DataSourceName": "root:root@tcp(127.0.0.1:3306)/checking_url?parseTime=true"
+  }
+}
