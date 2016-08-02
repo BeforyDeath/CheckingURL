@@ -50,7 +50,7 @@ func Update(UID string, list map[int]SrvStatus) error {
 func GetList() ([]*Url, error) {
 	log.Infof("DB читаю:\t%v", core.Config.Server.Quantity)
 
-	rows, err := Db.Query("SELECT id, domain_id, link, Last_datetime FROM url WHERE Last_datetime < (NOW() - interval 5 MINUTE) LIMIT 1000")
+	rows, err := Db.Query("SELECT id, domain_id, link, Last_datetime FROM url WHERE Last_datetime < (NOW() - interval 15 MINUTE) LIMIT ?", core.Config.Server.Quantity)
 	if err != nil {
 		return nil, err
 	}

@@ -5,10 +5,10 @@
     "OutFile": false
   },
   "Server": {
-    "Quantity": 1000
+    "Quantity": 550
   },
   "Worker": {
-    "Quantity": 100,
+    "Quantity": 35,
     "Timeout": 2000
   },
   "DataBase": {
